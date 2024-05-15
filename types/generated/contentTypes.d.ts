@@ -373,8 +373,9 @@ export interface ApiRestaurantRestaurant extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Name: Attribute.String & Attribute.Required & Attribute.Unique;
-    Description: Attribute.Blocks;
+    slug: Attribute.String;
+    name: Attribute.String;
+    email: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -11,13 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string",
-      "unique": true,
-      "required": true
+    "slug": {
+      "type": "string"
     },
-    "Description": {
-      "type": "blocks"
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
     }
   }
 }
