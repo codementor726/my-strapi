@@ -1,9 +1,23 @@
-'use strict';
+// ./src/api/restaurant/routes/restaurant.js
 
-/**
- * restaurant router
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::restaurant.restaurant');
+module.exports = {
+    routes: [
+      {
+        method: 'GET',
+        path: '/restaurants',
+        handler: 'restaurant.find',
+        config: {
+          policies: [],
+        },
+      },
+      {
+        method: 'GET',
+        path: '/restaurants/:slug',
+        handler: 'restaurant.findOne',
+        config: {
+          policies: [],
+        },
+      },
+    ],
+  };
+  
